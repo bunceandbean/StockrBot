@@ -1,4 +1,5 @@
 import pyfiglet as fig
+from visualization.tools import bcolors
 
 def render_ticker(ticker):
- print(fig.figlet_format(ticker, font = "slant")) 
+ print(bcolors["OKCYAN"] +fig.figlet_format(ticker, font = "slant") + bcolors["ENDC"])
