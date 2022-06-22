@@ -1,2 +1,0 @@
-yfinance 0.1.72 - https://pypi.org/project/yfinance
-pyfiglet 0.7 - https://pypi.org/project/pyfiglet/0.7/

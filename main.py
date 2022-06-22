@@ -8,6 +8,10 @@ def main():
     if tick_input == 'exit':
         return
     tick = yf.Ticker(tick_input)
+
+    #If the ticker does not exist, it will return an object with 9 default elements.
+    #This checks for more than 9 elements to see if it is a valid ticker.
+
     while len(tick.info) < 10:
         tick_input = str(input(bcolors["WARNING"] + "Error: Invalid ticker symbol. Try again, or write 'exit' to leave: " + bcolors["ENDC"])).lower()
         if tick_input == 'exit':

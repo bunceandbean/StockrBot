@@ -2,6 +2,8 @@ import sys
 import pyfiglet as fig
 from visualization.tools import bcolors
 
+#Renders ticker information to the screen. Argument is a Ticker object.
+
 def render_ticker(ticker):
     try:
         print(bcolors["OKBLUE"] + fig.figlet_format(ticker.info["symbol"], font = "slant") + bcolors["ENDC"])
