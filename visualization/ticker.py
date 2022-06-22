@@ -6,8 +6,9 @@ from visualization.tools import bcolors
 
 def render_ticker(ticker):
     try:
-        print(bcolors["OKBLUE"] + fig.figlet_format(ticker.info["symbol"], font = "slant") + ticker.info["shortName"] + bcolors["ENDC"])
+        print(bcolors["OKBLUE"] + fig.figlet_format(ticker.info["symbol"], font = "slant") + bcolors["ENDC"])
         try:
+            print(bcolors["OKBLUE"] + ticker.info["shortName"] + bcolors["ENDC"])
             print(bcolors["BOLD"] + bcolors["OKGREEN"] + "Current Price: " + str(ticker.info["currentPrice"]) + bcolors["ENDC"] + bcolors["ENDC"])
             print(bcolors["OKBLUE"] + "#################################" + bcolors["ENDC"])
             print(bcolors["OKGREEN"] + "Day High: " + str(ticker.info["dayHigh"]) + bcolors["ENDC"])
