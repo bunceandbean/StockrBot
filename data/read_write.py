@@ -7,7 +7,7 @@ def save_to_json(py_dict, name, dirs=""):
         print("Error: Object was not a 'dict' or name was not a 'string'.")
         sys.exit()
     with open(dirs + name + ".json", 'w') as f:
-        json.dump(py_dict, f)
+        json.dump(py_dict, f, sort_keys=True, indent=4)
 
 # This function loads in a .json file from Saves and returns a dictionary
 def load_from_json(name, dirs=''):
